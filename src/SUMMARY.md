@@ -1,25 +1,25 @@
 # Summary
 
 # Introduction
-- [Qase API]()
+- [Qase API](./intro/qase-api.md)
 
 # Javascript Reporters 
-- [Playwright](./playwright.md)
-- [Cypress]()
-- [Mocha]()
-- [WebdriverIO]()
-- [Newman]()
-- [Jest]()
-- [CucumberJS]()
-- [TestCafe]()
+- [Playwright](./js/playwright.md)
+- [Cypress](./js/cypress.md)
+- [Mocha](./js/mocha.md)
+- [WebdriverIO](./js/wdio.md)
+- [Newman](./js/newman.md)
+- [Jest](./js/jest.md)
+- [CucumberJS](./js/cucumberjs.md)
+- [TestCafe](./js/testcafe.md)
 
 
 # Python Reporters  
-- [Pytest]()
-- [Robotframework]()
+- [Pytest](./py/pytest.md)
+- [Robotframework](./py/robot.md)
 
 # Java Reporters  
 - [Cucumber]()
 - [Junit]()
-- [TestNG]()
+- [TestNG](./java/testng.md)
 
