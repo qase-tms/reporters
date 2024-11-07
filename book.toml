@@ -8,8 +8,8 @@ title = "Qase API Reporters"
 
 [output.html]
 # theme = "my-theme"
-# default-theme = "light"
-# preferred-dark-theme = "navy"
+default-theme = "rust"
+preferred-dark-theme = "navy"
 smart-punctuation = true
 # mathjax-support = false
 # copy-fonts = true
@@ -20,5 +20,18 @@ git-repository-url = "https://github.com/qase-tms"
 git-repository-icon = "fa-github"
 # edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 # site-url = "/example-book/"
-# cname = "myproject.rs"
+cname = "reporters.qase.io"
 # input-404 = "not-found.md"
+
+[output.html.fold]
+enable = true    # whether or not to enable section folding
+level = 0         # the depth to start folding
+
+[output.html.code.hidelines]
+python = "//"
+javascript = "//"
+java = "//"
+
+[output.html.playground]
+editable = true
+line-numbers = true
