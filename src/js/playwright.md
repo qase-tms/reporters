@@ -1,8 +1,8 @@
-# Qase Playwright
+# Playwright
 
 **Playwright** is a framework for Web Testing and Automation. It allows testing Chromium, Firefox, and WebKit with a single API. Playwright is built to enable cross-browser web automation that is evergreen, capable, reliable, and fast.
 
-With the **playwright-qase-reporter**, you can publish the results of your automated test runs to your Qase project using the public API.
+With the `playwright-qase-reporter`, you can publish the results of your automated test runs to your Qase project using the public API.
 
 <br>
 
@@ -14,7 +14,7 @@ To integrate Qase into your Playwright project, follow these steps:
 
 To activate the app, go to the [Apps](https://app.qase.io/apps?app=playwright-reporter) section in your workspace, and click on 'Activate'.
 
-Switch to the 'Access tokens' tab, and create a new API token from there. Save the API token as we'll need it in the following steps.
+Switch to the 'Access tokens' tab, and create a new API token from here. Save the API token as we'll need it for the next steps.
 
 ### Add playwright-qase-reporter to your project
 
@@ -30,8 +30,11 @@ npm install -D playwright-qase-reporter
 
 At the very least, the reporter will need two variables defined — your Playwright App's Token, and the Qase Project you want to publish the results to:
 
+<br>
+
+TypeScript: `playwright.config.ts`
+
 ```typescript
-// playwright.config.ts
 
 const config: PlaywrightTestConfig = {
   reporter: [
@@ -52,8 +55,11 @@ const config: PlaywrightTestConfig = {
 
 module.exports = config;
 ```
+Please refer to [*this article*](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) for guidance on how to find your Project code in Qase.
+<br>
+<br>
 
-Here's an example of `playwright.config.js`:
+JavaScript: `playwright.config.js`
 
 ```javascript
 const config = {
@@ -85,7 +91,6 @@ const config = {
 module.exports = config;
 ```
 
-Please refer to [this article](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) for guidance on how to find your Project code in Qase.
 
 If you do not want to configure the reporter's options in your Playwright configuration file, you have the option to use a `qase.config.json` to have all your reporter options defined.
 
@@ -117,6 +122,7 @@ test.describe('Example Test Suite', () => {
   });
 });
 ```
+<br>
 
 **Now, let's run the test** by executing the following command:
 
