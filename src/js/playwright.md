@@ -130,7 +130,7 @@ test.describe('Example Test Suite', () => {
 QASE_MODE=testops npx playwright test
 ```
 
-In the above command, we're setting the reporter's mode to 'testops' using the environment variable `QASE_MODE`. You can learn more about other reporter modes [here](https://www.example.com/).
+In the above command, we're setting the reporter's mode to 'testops' using the environment variable `QASE_MODE`. 
 
 Click on the link printed at the end of the run to go to the test run in Qase.
 
@@ -144,6 +144,4 @@ The **playwright-qase-reporter** can operate in two modes:
 
 * **Report**: generates a JSON report locally in the specified directory.
 
-Click the button below to look at all the available configuration options.
-
-
+In the next section, we'll look at all the available configuration options.

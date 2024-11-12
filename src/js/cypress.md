@@ -123,7 +123,7 @@ Now, let's run the test by executing the following command:
 QASE_MODE=testops npx cypress run
 ```
 
-In the above command, we're setting the reporter's mode to `testops` using the Environment variable `QASE_MODE`. You can learn more about other reporter modes [here](https://github.com/qase-tms/cypress-qase-reporter#configuration).
+In the above command, we're setting the reporter's mode to `testops` using the Environment variable `QASE_MODE`. 
 
 Click on the link printed at the end of the run to go to the test run in Qase.
 
@@ -133,4 +133,4 @@ The `cypress-qase-reporter` can operate in two modes:
 * Testops: publishes the report to the specified Qase Project.
 * Report: generates a JSON report locally in the specified directory.
 
-You can find all the available configuration options [here](https://github.com/qase-tms/cypress-qase-reporter#configuration).
+In the next section, we'll look at all the available configuration options.
