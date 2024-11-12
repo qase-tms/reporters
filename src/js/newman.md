@@ -109,7 +109,7 @@ Create a `collections/` directory in the root of your project and add the follow
 QASE_MODE=testops npx newman run -r qase collections/example-collection.json
 ```
 
-In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`. You can learn more about other reporter modes here.
+In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`. 
 
 Click on the link printed at the end of the run to go to the test run in Qase.
 
@@ -122,4 +122,4 @@ The `newman-reporter-qase` can operate in two modes:
 * Testops: publishes the report to the specified Qase Project.
 * Report: generates a JSON report locally in the specified directory.
 
-In the next page, we'll look at all the available configuration options for the reporter.
+In the next section, we'll look at all the available configuration options.

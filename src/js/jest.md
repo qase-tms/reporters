@@ -131,7 +131,7 @@ test('[Example] adds 1 + 2 to equal 3', () => {
 QASE_MODE=testops npx jest sum
 ```
 
-In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`. You can learn more about other reporter modes here.
+In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`.
 
 
 Click on the link printed at the end of the run to go to the test run in Qase.

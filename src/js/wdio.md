@@ -103,7 +103,7 @@ Let's run the test, by executing the following command:
 QASE_MODE=testops npx wdio run ./wdio.conf.ts
 ```
 
-In the above command, we're setting the reporter's mode to 'testops' using the Environment variable `QASE_MODE`. You can learn more about other reporter modes here.
+In the above command, we're setting the reporter's mode to 'testops' using the Environment variable `QASE_MODE`. 
 
 Click on the link printed at the end of the run to go to the test run in Qase.
 
@@ -111,3 +111,5 @@ Click on the link printed at the end of the run to go to the test run in Qase.
 The `wdio-qase-reporter` can operate in two modes:
 * Testops: publishes the report to the specified Qase Project.
 * Report: generates a JSON report locally in the specified directory.
+
+In the next section, we'll look at all the available configuration options.

@@ -77,7 +77,7 @@ Now, let's run the test, by executing the following command:
 QASE_MODE=testops npx cucumber-js -f cucumberjs-qase-reporter features -r step_definitions
 ```
 
-In the above command, we're setting the reporter's mode to 'testops' using the Environment variable `QASE_MODE`. You can learn more about other reporter modes here.
+In the above command, we're setting the reporter's mode to 'testops' using the Environment variable `QASE_MODE`.
 
 <br>
 
