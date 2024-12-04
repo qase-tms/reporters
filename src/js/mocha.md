@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-At the very least, the reporter will need two variables defined - your Cypress App's Token, and the Qase Project code you want to publish your results to.
+At the very least, the reporter will need two variables defined - your Mocha App's Token, and the Qase Project code you want to publish your results to.
 
 We will create a new file `qase.config.json` at the root of your project to add these values.
 

@@ -2,6 +2,8 @@
 
 # Introduction
 - [Qase API](./intro/qase-api.md)
+- [Qase CLI App](./intro/qli.md)
+    - [Usage](./intro/qli-usage.md)
 - [Reporters](./intro/reporters.md)
 ---
 # Javascript
@@ -9,6 +11,8 @@
     - [changelog](./js/changelog/changelog-playwright.md)
 - [Cypress](./js/cypress.md)
     - [changelog](./js/changelog/changelog-cypress.md)
+- [CucumberJS](./js/cucumberjs.md)
+    - [changelog](./js/changelog/changelog-cucumberjs.md) 
 - [Mocha](./js/mocha.md)
     - [changelog](./js/changelog/changelog-mocha.md)
 - [WebdriverIO](./js/wdio.md)
