@@ -9,7 +9,7 @@ title = "Qase API Reporters"
 [output.html]
 # theme = "my-theme"
 default-theme = "rust"
-# preferred-dark-theme = "navy"
+preferred-dark-theme = "rust"
 smart-punctuation = true
 # mathjax-support = false
 # copy-fonts = true
