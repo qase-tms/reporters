@@ -1,0 +1,50 @@
+/* ANCHOR: all */
+{
+  "mode": "testops",
+  "fallback": "report",
+  "debug": false,
+  "environment": "local",
+  "captureLogs": false,
+// ANCHOR: report
+  "report": {
+    "driver": "local",
+    "connection": {
+      "local": {
+        "path": "./build/qase-report",
+        "format": "json"
+      }
+    }
+  },
+// ANCHOR_END: report
+// ANCHOR: testops
+  "testops": {
+    "api": {
+      "token": "<token>",
+      "host": "qase.io"
+    },
+    "run": {
+      "title": "Automated Test run",
+      "description": "Your Test run's description here.",
+      "complete": true
+    },
+    "defect": false,
+    "project": "<project_code>",
+    "batch": {
+      "size": 100
+    }
+  }
+// ANCHOR_END: testops
+}
+/* ANCHOR_END: all */
+
+
+/* ANCHOR: basic */
+{
+  "testops": {
+    "api": {
+      "token": "<token>"
+    },
+    "project": "<project_code>"
+  }
+}
+/* ANCHOR_END: basic */
