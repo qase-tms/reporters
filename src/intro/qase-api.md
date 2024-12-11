@@ -1,6 +1,6 @@
 # Qase API
 
-You can use Qase's API endpoints and perform actions with the entities stored in the database. The API is organized around REST. You can try using the API on the API [Reference page](https://developers.qase.io/reference/introduction-to-the-qase-api) or by exploring the public page in [Postman](https://www.postman.com/qaseio?tab=collections).
+You can use Qase's API endpoints and perform actions with the entities stored in the database. The API is organized around REST. You can try using the API on the [API Reference page](https://developers.qase.io/reference/introduction-to-the-qase-api), or by exploring the public page in [Postman](https://www.postman.com/qaseio?tab=collections).
 
 ## API Rate Limits
 

@@ -1,11 +1,11 @@
 # Qase CLI App (qli)
 
-Qase CLI (or `qli`) is Qase's command line app built in Go Language, which can be used to start and complete test runs, and publish results to Qase in several formats.
+Qase CLI, or `qli` is the command line app for Qase, written in Go. `qli` can be used to start and complete test runs, and publish test results to Qase in several formats.
 
 You can view the source code on [GitHub](https://github.com/qase-tms/qasectl)
 
 ## Installation Options
-
+---
 ### Build from Source
 
 1\. Clone the repository:

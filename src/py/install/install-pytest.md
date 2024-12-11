@@ -21,15 +21,7 @@ Please ensure that this file is placed in the root of your project.
 
 `qase.config.json`:
 ```json
-{
-  "debug": false,
-  "testops": {
-    "api": {
-      "token": "<app-token>"
-    },
-    "project": "<project-code>"
-  }
-}
+{{#include ../../intro/code/qase.config.json:basic}}
 ```
 
 Please refer to this article for guidance on how to find your Project code in Qase.

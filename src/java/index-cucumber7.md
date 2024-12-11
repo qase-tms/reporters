@@ -1,4 +1,4 @@
-# Cucumber (4/5/6/7)
+# Cucumber 7
 
 Cucumber is a testing library that allows you to write your tests in plain language. It follows the given-when-then structure, but as you'll see the tests are very readable. Even by business users. This allows your tests to be a point of communication and collaboration.
 
