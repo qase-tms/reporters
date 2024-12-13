@@ -72,4 +72,4 @@ Click on the link printed at the end of the run to go to the test run in Qase.
 <br>
 
 ---
-[^yarn]: If you are using `yarn` as your pacakge manager, please run `yarn add playwright-qase-reporter -D` to install the reporter, and `yarn playwright test` to run the tests. 
+[^yarn]: If you are using `yarn` as your package manager, please run `yarn add playwright-qase-reporter -D` to install the reporter, and `yarn playwright test` to run the tests. 
