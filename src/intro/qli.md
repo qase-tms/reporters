@@ -6,6 +6,16 @@ You can view the source code on [GitHub](https://github.com/qase-tms/qasectl)
 
 ## Installation Options
 ---
+### Install via go install
+
+The easiest way to install Qase CLI is using go install:
+
+```bash
+go install github.com/qase-tms/qasectl@latest
+```
+
+Make sure to add `$GOPATH/bin` to your `$PATH` environment variable to be able to run the `qasectl` command. The binary is named `qasectl`, you may want to create an alias, as `qli`.
+
 ### Build from Source
 
 1\. Clone the repository:

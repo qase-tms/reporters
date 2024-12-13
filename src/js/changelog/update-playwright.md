@@ -15,4 +15,4 @@ There are two changes:
     see the [configuration reference](../../intro/configuration.md) below.
 
 The previous test annotation syntax is still supported, so there is no need to rewrite the tests.
-However, check out the docs for the new, more flexible and powerful syntax.
+However, [check out the docs](../syntax/syntax-playwright.md) for the new, more flexible and powerful syntax.
