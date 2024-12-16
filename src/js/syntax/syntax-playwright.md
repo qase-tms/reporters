@@ -1,12 +1,18 @@
 # Syntax
 
-If you are not using any Qase syntax, the reporter uses the title from the `describe` and `test` functions to make the Qase Suite and Test case titles for the new cases it creates.
+
+> [**Click here**](https://github.com/cskmnrpt/qase-playwright/tree/main/tests/examples) to view Example tests for the following syntax.
+
+
+If you do not use any Qase syntax, the reporter uses the title from the `describe` and `test` functions to make the Suite and Test case titles while publishing results.
+
 
 ## Example Spec file
 ---
 ```javascript
 {{#include ../code/playwright/syntax.spec.js:all}}
 ```
+
 
 ### Import Statement
 ---
@@ -18,6 +24,7 @@ import { qase } from 'playwright-qase-reporter';
 Now, let's take a closer look at each of the Qase functions.
 
 
+ 
 ### Qase ID
 ---
 
@@ -29,7 +36,6 @@ Qase IDs can be defined using two different methods. It is best to select one me
 test(qase(<id>, 'A simple test'), () => {
     ..
 ```
-<br>
 
 **Inside the `test` Body**: 
 
@@ -40,13 +46,30 @@ test('A simple test', () => {
 });
 ```
 
+**In the test's annotations**:
+
+```js
+test('A simple test',
+{
+  annotation: { type: 'QaseID', description: '<id>' },
+},
+  async () => {
+    // Test logic here
+});
+```
+
 
 ### Qase Title
 --- 
 
-The method `qase.title('Example title');` sets the title of the test case. It applies whether a new test case is being created or the title of an existing test case is being updated – if it differs in your Qase project.
+The `qase.title()` method is used to set the title of a test case, both when creating a new test case from the result, and when updating the title of an existing test case - *if used with `qase.id()`.*
 
-If a title is not explicitly set using the qase.title method, the title specified in the test(..) function will be used when creating new test cases. However, the qase.title method always takes precedence and overrides the test title if defined.
+```javascript
+{{#include ../code/playwright/title.spec.js:syntax}}
+```
+
+If you don’t explicitly set a title using the `qase.title` method, the title specified in the `test(..)` function will be used for new test cases. However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
+
 
 
 ### Steps
@@ -57,10 +80,9 @@ The reporter uses the title from the `test.step` function as the step title. By 
 Additionally, these steps get their own result in the Qase Test run, offering a well-organized summary of the test flow. This helps quickly identify the cause of any failures.
 
 ```javascript
-  test("This is the Test's title", async () => {
-    await test.step('And, this will be the step title', async () => {
-      ...
+{{#include ../code/playwright/steps.spec.js:syntax}}
 ```
+
 
 ### Fields
 ---
@@ -68,5 +90,52 @@ Additionally, these steps get their own result in the Qase Test run, offering a 
 Currently, you can define `description`, `pre & post conditions`, and fields like `severity`, `priority`, `layer` with this method, allowing you to specify and maintain the context of the case, all directly from within your code. 
 
 ```javascript
-{{#include ../code/playwright/chain.spec.js:test}}
+{{#include ../code/playwright/chain.spec.js:syntax}}
+```
+
+
+### Suite 
+---
+
+You can use this method to nest the resulting test cases in a particular suite. There's something to note here – suites, unlike test cases, are not identified uniquely by the Reporter. Therefore, when defining an existing suite - the title of the suite is used for matching.
+
+```js
+{{#include ../code/playwright/suite.spec.js:syntax}}
+```
+
+
+### Parameters
+---
+Parameters are a great way to make your tests more dynamic, reusable, and data-driven. By defining parameters in this method, you can ensure only one test case with all the parameters is created in your Qase project, avoiding duplication.
+
+
+```javascript
+{{#include ../code/playwright/params.spec.js:syntax}}
+```
+
+
+### Comment
+---
+In addition to `test.step()`, this method can be used to provide any additional context to your test, it helps maintiain the code by clarifying the expected result of the test.
+
+```js
+{{#include ../code/playwright/comment.spec.js:syntax}}
+```
+
+
+### Attach
+---
+This method can help attach one, or more files to the test's result. You can also add the file's contents, directly from code. For example: 
+
+```js
+{{#include ../code/playwright/attach.spec.js:syntax}}
+```
+
+
+### Ignore
+---
+If this method is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still execute in Playwright, its result will not be recorded by the reporter.
+
+```js
+{{#include ../code/playwright/ignore.spec.js:syntax}}
 ```

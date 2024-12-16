@@ -2,6 +2,7 @@
 
 # Introduction
 - [Qase API](./intro/qase-api.md)
+    - [Why Qase?](./intro/why-qase.md)
 - [Qase CLI App](./intro/qli.md)
     - [Usage](./intro/qli-usage.md)
 - [Reporters](./intro/reporters.md):

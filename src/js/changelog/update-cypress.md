@@ -1,6 +1,7 @@
 # Update
 
-## Updating from v2.1 to v2.2
+### Updating from v2.1 to v2.2
+---
 
 To update an existing test project using Qase reporter from version 2.1 to version 2.2,
 run the following steps:
@@ -17,7 +18,8 @@ run the following steps:
      }
      ...
      
-## Updating from v1.x to v2.1
+### Updating from v1.x to v2.1
+---
 
 To update an existing test project using Qase reporter from version 1 to version 2.1,
 run the following steps:
