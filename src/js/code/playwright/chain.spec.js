@@ -17,3 +17,20 @@ test('Maintain your test meta-data from code', async () => {
     .comment("This comment will be displayed in the 'Actual Result' field of the test result in Qase.");
 });
 // ANCHOR_END: test
+
+
+// ANCHOR: syntax
+//test('Maintain your test meta-data from code', async () => {
+  qase
+    .title('Use qase annotation in a chain')
+    .fields({
+      severity: 'high',
+      priority: 'medium',
+      layer: 'api',
+      description: `Code it quick, fix it slow,
+                    Tech debt grows where shortcuts go,
+                    Refactor later? Ha! We know.`
+    })
+//    //  test logic here
+//});
+// ANCHOR_END: syntax
