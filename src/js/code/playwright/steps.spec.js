@@ -4,7 +4,7 @@ import { qase } from 'playwright-qase-reporter';
 // ANCHOR: syntax
 //test('A Test case with steps, updated from code', async () => {
   await test.step('Initialize the environment', async () => {
-    // Set up test environment
+//    // Set up test environment
 //  });
 //  await test.step('Test Core Functionality of the app', async () => {
 //    // Exercise core functionality
@@ -19,4 +19,4 @@ import { qase } from 'playwright-qase-reporter';
 //    expect(false).toBe(true);
 //  });
 //});
-
+// ANCHOR_END: syntax

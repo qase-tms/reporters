@@ -3,13 +3,12 @@ import { qase } from 'playwright-qase-reporter';
 
 // ANCHOR: syntax
 //test("Test with a defined suite", () => {
-//
   qase.suite("Suite defined with qase.suite()");
-//
-// /* Or, nest multiple levels of suites. `\t` is used for dividing each suite name. */
-//
-//  qase.suite("Application\tAuthentication\tLogin\tEdge_case");
-//
-//  expect(true).toBe(true);
+    /*
+     *  Or, nest multiple levels of suites. 
+     *  `\t` is used for dividing each suite name.
+     */
+  qase.suite("Application\tAuthentication\tLogin\tEdge_case");
+  ////  test logic here
 //});
 // ANCHOR_END: syntax
