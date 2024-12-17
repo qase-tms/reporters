@@ -3,9 +3,10 @@ import { qase } from 'playwright-qase-reporter';
 
 // ANCHOR: syntax
 //test("A test case with qase.comment()", () => {
-//
-  qase.comment("This is a comment in a test");
-//
-//  expect(true).toBe(true);
+  //  /*
+  //   * Please note, this comment is added to a Result, not to the Test case.
+  //   */
+  qase.comment("This comment is added to the result");
+//  // test logic here
 //});
 // ANCHOR_END: syntax

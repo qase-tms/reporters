@@ -3,25 +3,27 @@ import { qase } from 'playwright-qase-reporter';
 
 // ANCHOR: syntax
 //const testCases = [
-//  { username: '@alice', browser: 'Chromium', result: 'Pass' },
-//  { username: '@bob', browser: 'Firefox', result: 'Pass'  },
-//  { username: '@charlie', browser: 'Firefox', result: 'Fail'  },
+//  { browser: "Chromium", username: "@alice", password: "123" },
+//  { browser: "Firefox", username: "@bob", password: "456" },
+//  { browser: "Webkit", username: "@charlie", password: "789" },
 //];
 //
-//testCases.forEach(({ username, browser, result }) => {
-//  test(`Test login with ${username}`, async () => {
-//    qase.title("Verify if user is able to login.");
+//testCases.forEach(({ browser, username, password,  }) => {
+//  test(`Test login with ${browser}`, async () => {
+//    qase.title("Verify if page loads on all browsers");
 //
-    qase.parameters({ 'Username': username });  // Single parameter
+    qase.parameters({ Browser: browser });  // Single parameter
+//  // test logic
+
+//testCases.forEach(({ username, password }) => {
+//  test(`Test login with ${username} using qase.groupParameters`, () => {
+//    qase.title("Verify if user is able to login with their username.");
 
     qase.groupParameters({  // Group parameters
-      'Browser': browser,
-      'Expected result': result,
+      Username: username,
+      Password: password,
     });
-//
-//    expect(true).toBe(true);
-//  });
-//});
+//  // test logic
 // ANCHOR_END: syntax
 
 testCases.forEach(({ username, browser }) => {

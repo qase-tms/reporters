@@ -1,6 +1,41 @@
 # changelog: cypress
 
 > For the most up-to-date changelog, please check our [GitHub repository](https://github.com/qase-tms/qase-javascript/blob/main/qase-cypress/changelog.md).
+ 
+## 2.2.5
+
+Support Cucumber tests in Cypress with the `cypress-cucumber-preprocessor` plugin.
+
+## 2.2.4
+
+Fixed an issue with screenshots not being uploaded to Qase for failed tests.
+
+## 2.2.3
+
+Fixed an issue with the `@cypress/grep` plugin. When the `grepOmitFiltered` option is set to `true`, the reporter
+encounters an error.
+
+```log
+Cannot set properties of undefined (setting 'title')
+```
+
+## 2.2.2
+
+Fixed an issue with metadata. When specifying the path to the Cypress config located outside the root directory,
+metadata was not added to the test case.
+
+
+### 2.2.1
+
+When specifying test names, QaseIDs are now excluded from the final test name.
+
+```js
+// The test name will be 'Example', not 'Example (Qase ID: 1)'
+qase(1, it('Example', () => {
+    expect(true).to.equal(true);
+  })
+);
+```
 
 ## 2.2.0
 

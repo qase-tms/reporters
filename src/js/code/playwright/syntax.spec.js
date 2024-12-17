@@ -1,20 +1,19 @@
-/* ANCHOR: all */
+// ANCHOR: syntax
 import { qase } from 'playwright-qase-reporter';
 
 describe('Suite title', () => {
-  test(qase(2, "Login with valid credentials"), () => {
-    qase.title('Test title');
+
+  test(qase(1, "This is the test name"), () => {
+    qase.title("This overrides the test name");
     qase.suite("Suite name");
     qase.fields({ 'severity': 'high', 'priority': 'medium' });
-    qase.ignore(); // doesn't report his result to Qase.
-    qase.parameters({ 'username': @test }); 
-    qase.groupParameters({ 'Browser': browser, 'Username': username });
     qase.attach({ paths: './tests/examples/attachments/test-file.txt' });
     qase.comment("A comment for this result");
-    await test.step('Test step title', async () => {
-      expect(true).toBe(true);
-    });
-    expect(true).toBe(true);
+    qase.ignore(); // doesn't report his result to Qase.
+    qase.parameters({ Username: "@test" }); 
+    qase.groupParameters({ Username: username, Password: "123" });
+    await test.step('Test step title', async () => // step logic });
+  // // test logic
   });
 
-/* ANCHOR_END: all */
+/* ANCHOR_END: syntax */

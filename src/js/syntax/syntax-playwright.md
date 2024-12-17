@@ -10,7 +10,7 @@ If you do not use any Qase syntax, the reporter uses the title from the `describ
 ## Example Spec file
 ---
 ```javascript
-{{#include ../code/playwright/syntax.spec.js:all}}
+{{#include ../code/playwright/syntax.spec.js:syntax}}
 ```
 
 
@@ -29,6 +29,8 @@ Now, let's take a closer look at each of the Qase functions.
 ---
 
 Qase IDs can be defined using two different methods. It is best to select one method and consistently use it throughout your tests. The first method is recommended.
+
+Only one Qase Id can be linked to a test. 
 
 **Inline with the `test` Function**: 
 
@@ -134,7 +136,7 @@ This method can help attach one, or more files to the test's result. You can als
 
 ### Ignore
 ---
-If this method is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still execute in Playwright, its result will not be recorded by the reporter.
+If this method is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still executed by Playwright, its result will not be considered by the reporter.
 
 ```js
 {{#include ../code/playwright/ignore.spec.js:syntax}}
