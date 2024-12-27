@@ -1,6 +1,6 @@
 # Syntax
 
-> [**Click here**](https://github.com/cskmnrpt/qase-cypress/tree/main/tests/examples) to view Example tests for the following syntax.
+> [**Click here**](https://github.com/cskmnrpt/qase-cypress/tree/main/cypress/e2e/tests/examples) to view Example tests for the following syntax.
 
 
 If you do not use any Qase syntax, the reporter uses the title from the `describe` and `test` functions to make the Suite and Test case titles while publishing results.
