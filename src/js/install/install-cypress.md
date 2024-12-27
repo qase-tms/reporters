@@ -67,11 +67,13 @@ module.exports = defineConfig({
 e2e: {
   setupNodeEvents(on, config) {
     require('cypress-qase-reporter/metadata')(on);
-    on('before:run', async (details) => {
-      // your custom logic here
+    on('before:run', async () => {
+      console.log('override before:run');
+      await beforeRunHook(config);
     });
     on('after:run', async () => {
-      // your custom logic here
+      console.log('override after:run');
+      await afterRunHook(config):
     });
   },
 }
