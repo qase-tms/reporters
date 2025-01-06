@@ -3,8 +3,6 @@
 # Introduction
 - [Qase API](./intro/qase-api.md)
     - [Why Qase?](./intro/why-qase.md)
-- [Qase CLI App](./intro/qli.md)
-    - [Usage](./intro/qli-usage.md)
 - [Reporters](./intro/reporters.md):
     - [Configuration](./intro/configuration.md)
 
@@ -105,3 +103,8 @@
         - [Install](./java/install/install-testng.md)
         - [Syntax](./java/syntax/syntax-testng.md)
         - [Changelog](./java/changelog/changelog-testng.md)
+        
+- [Go](./go/index-go.md)
+    - [Qase CLI App (qli)](./go/index-qli.md)
+        - [Install](./go/qli/install-qli.md)
+        - [Usage](./go/qli/usage-qli.md)
