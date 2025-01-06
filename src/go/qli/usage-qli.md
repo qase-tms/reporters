@@ -1,6 +1,6 @@
-## Using Qase CLI
+# Using Qase CLI
 
-You can generate an API token from [here](https://app.qase.io/user/api/token) and refer to [this guide](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) to find your project code and run_id in Qase.
+You can generate an API token from [here](https://app.qase.io/user/api/token) and refer to [this guide](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) to find your project code and `run_id` in Qase.
 
 ### Create a Test Run
 
