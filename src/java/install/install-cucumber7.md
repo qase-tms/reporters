@@ -17,15 +17,13 @@ Run the following command to quickly initialize a new project -
 mvn archetype:generate \
   "-DarchetypeGroupId=io.cucumber" \
   "-DarchetypeArtifactId=cucumber-archetype" \
-  "-DarchetypeVersion=7.18.1" \
+  "-DarchetypeVersion=7.14.0" \
   "-DgroupId=hellocucumber" \
   "-DartifactId=qase-cucumber7" \
   "-Dpackage=hellocucumber" \
   "-Dversion=1.0.0-SNAPSHOT" \
   "-DinteractiveMode=false"
 ```
-
-Here's an example `pom.xml` that has all the required dependencies - [Link](https://rentry.co/yafswz9x).
 
 To install and add the reporter as a dependency, add the following to your `pom.xml` -
 
@@ -135,6 +133,17 @@ test.doFirst {
 }
 ```
 
+## Configure the reporter
+At the very least, the reporter will need two variables defined — your Cucumber app token, and the Qase project you want to publish the results to:
+
+Please refer to [*this article*](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) for guidance on how to find your Project code in Qase.
+
+You can configure the reporter options in a separate file `qase.config.json`, placed in the *root directory of your project*.
+```json
+{{#include ../../intro/code/qase.config.json:basic}} 
+```
+
+
 ### Let's verify the integration
 
 We'll use a simple test that is included in the example project to check if the results are being published to your Qase project.
@@ -162,17 +171,14 @@ public class RunCucumberTest {
 Now, let's run the test, by executing the following command -
 
 ``` bash
-mvn clean test -DQASE_MODE=testops -DQASE_TESTOPS_PROJECT=<prj-code> -DQASE_TESTOPS_API_TOKEN=<app-token>
+QASE_MODE=testops mvn clean test
 ```
 
 **For Gradle**
 ``` bash
-gradle clean test -DQASE_MODE=testops -DQASE_TESTOPS_PROJECT=<prj-code> -DQASE_TESTOPS_API_TOKEN=<app-token>
+QASE_MODE=testops gradle clean test
 ```
 
 Please refer to [this article](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) for guidance on how to find your Project code in Qase. In the above command, we're setting the reporter's mode with `QASE_MODE`.
 
-You should see the following summary at the end of the execution -
-
-Here's how your Qase Test run should look like -
-
+You should now see the test result in your Qase project.
