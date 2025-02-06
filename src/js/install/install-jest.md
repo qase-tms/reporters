@@ -2,7 +2,7 @@
 
 To integrate Qase Reporter in your Jest setup, follow these steps:
 
-### activate the jest app
+### Activate the jest app
 
 To activate the app, go to the [Apps](https://app.qase.io/apps?app=jest-reporter) section in your workspace, and click on 'Activate'
 
@@ -46,33 +46,8 @@ export default {
 };
 ```
 
-*The above example is using *`ES Module` format, for a `CommonJS` version, copy the code from this toggle.
+*The above example is using *`ES Module` format, for a `CommonJS` version, click [here](https://rentry.co/2hw84pdn).
 
-```
-const defaultConfig = {
-  reporters: [
-    'default',
-    [
-      'jest-qase-reporter',
-      {
-        testops: {
-          api: {
-            token: 'api_key', // Replace with your actual API token
-          },
-          project: 'project_code', // Replace with your project code
-          run: {
-            complete: true,
-          },
-        },
-        debug: true,
-      },
-    ],
-  ],
-  // Other configurations...
-};
-
-module.exports = defaultConfig;
-```
 
 Please refer to this article for guidance on how to find your Project code in Qase.
 
@@ -119,20 +94,8 @@ test('[Example] adds 1 + 2 to equal 3', () => {
 
 **Now, let's run the** **test**, by executing the following command -
 
-```
+``` sh
 QASE_MODE=testops npx jest sum
 ```
 
 In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`.
-
-
-Click on the link printed at the end of the run to go to the test run in Qase.
-
-
-<div style="text-align: center;">
-    <img src="./pictures/jest-run_link.png" alt="Test run link" style="width:80%;" />
-</div>
-
-![Test run page](./pictures/jest-run_page.png)
-
-

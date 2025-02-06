@@ -77,6 +77,3 @@ QASE_MODE=testops npx mocha
 ```
 
 In the above command, we're setting the reporter's mode to 'testops' using the Environment variable `QASE_MODE`. 
-
-Click on the link printed at the end of the run to go to the test run in Qase.
-
