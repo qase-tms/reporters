@@ -1,5 +1,7 @@
 # Syntax
 
+Tip: Click the _eyeball icon_ (<i class="fa fa-eye"></i>) in code blocks to toggle the visibility of the hidden lines.
+
 > [**Click here**](https://github.com/cskmnrpt/qase-cypress/tree/main/cypress/e2e/tests/examples) to view Example tests for the following syntax.
 
 
@@ -48,7 +50,7 @@ The `qase.title()` method is used to set the title of a test case, both when cre
 {{#include ../code/cypress/title.cy.js:syntax}}
 ```
 
-If you don’t explicitly set a title using the `qase.title` method, the title specified in the `test(..)` function will be used for new test cases. However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
+If you don’t explicitly set a title using the `qase.title` method, the title specified in the `it(..)` function will be used for new test cases. However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
 
 
 

@@ -1,5 +1,7 @@
 # Syntax
 
+Tip: Click the _eyeball icon_ (<i class="fa fa-eye"></i>) in code blocks to toggle the visibility of the hidden lines.
+
 
 > [**Click here**](https://github.com/cskmnrpt/qase-playwright/tree/main/tests/examples) to view Example tests for the following syntax.
 
