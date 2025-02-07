@@ -2,6 +2,30 @@
 
 > For the most up-to-date changelog, please check our [GitHub repository](https://github.com/qase-tms/qase-javascript/blob/main/qase-testcafe/changelog.md).
 
+## 2.0.4
+
+
+Support `step` and `attach` methods for test cases.
+
+```ts
+test('test', async (t) => {
+  qase.attach({ name: 'attachment.txt', content: 'Hello, world!', contentType: 'text/plain' });
+  
+  await qase.step('Step 1', async (s1) => {
+    await s1.step('Step 1.1', async (s11) => {
+      await s11.step('Step 1.1.1', async (s111) => {
+        s11.attach({ name: 'attachment.txt', content: 'Hello, world!', contentType: 'text/plain' });
+        await s111.expect(true).ok();
+      });
+    });
+    await t.expect(true).ok();
+  });
+  await t.expect(true).ok();
+});
+
+```
+
+
 ## 2.0.3
 
 
