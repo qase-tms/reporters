@@ -62,14 +62,6 @@ QASE_MODE=testops npx playwright test
 ```
 
 In the above command, we're setting the reporter's mode to 'testops' using the environment variable `QASE_MODE`. 
-
-<br> 
-Click on the link printed at the end of the run to go to the test run in Qase.
-
-
-<br>
-<br>
 <br>
 
----
 [^yarn]: If you are using `yarn` as your package manager, please run `yarn add playwright-qase-reporter -D` to install the reporter, and `yarn playwright test` to run the tests. 

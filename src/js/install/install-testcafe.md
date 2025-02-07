@@ -3,8 +3,9 @@
 To integrate Qase Reporter in your TestCafe setup, follow these steps:
 
 
-
 ### Activate the TestCafe App
+=======
+To integrate Qase Reporter in your Playwright setup, follow these steps:
 
 To activate the app, go to the [Apps](https://app.qase.io/apps?app=testcafe-reporter) section in your workspace, and click on 'Activate'.
 
@@ -14,11 +15,13 @@ Switch to the 'Access tokens' tab, and create a new API token from here. Save th
 
 ### Add testcafe-reporter-qase to your project
 
+
 To install and add the reporter as a development dependency, run the following command in your node project [^yarn]:
 
 ```bash
 npm install -D testcafe-reporter-qase
 ```
+
 
 
 
@@ -60,20 +63,10 @@ We'll use a simple test to check if the results are being published to your Qase
 **Now, let's run the test** by executing the following command:
 
 ```bash
-QASE_MODE=testops npx testcafe chrome tests/**/*.js --reporter qase
+QASE_MODE=testops npx testcafe chrome ./tests/exampleTest.js -r spec,qase
 ```
 
-In the above command, we're setting the reporter's mode to 'testops' using the environment variable `QASE_MODE`. You can set the same inside your `qase.config.json` file by adding:
-```json
-"mode":"testops"
-```
+In the above command, we're setting the reporter's mode to 'testops' using the environment variable `QASE_MODE`. 
 <br> 
-Click on the link printed at the end of the run to go to the test run in Qase.
 
-
-<br>
-<br>
-<br>
-
----
-[^yarn]: If you are using `yarn` as your package manager, please run `yarn add testcafe-reporter-qase -D` to install the reporter, and `yarn playwright test` to run the tests. 
+[^yarn]: If you are using `yarn` as your package manager, please run `yarn add testcafe-reporter-qase -D` to install the reporter.

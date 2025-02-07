@@ -46,7 +46,7 @@ Create a `collections/` directory in the root of your project and add the follow
 
 // `example-collection.json`
 
-```
+```json
 {
   "info": {
     "name": "Example API Tests",
@@ -104,9 +104,3 @@ QASE_MODE=testops npx newman run -r qase collections/example-collection.json
 ```
 
 In the above command, we're setting the reporter's mode to '`testops`' using the Environment variable `QASE_MODE`. 
-
-Click on the link printed at the end of the run to go to the test run in Qase.
-
-![Test run page](./pictures/newman-run_page.png)
-
-
