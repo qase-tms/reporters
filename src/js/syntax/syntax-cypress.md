@@ -5,7 +5,7 @@ Tip: Click the _eyeball icon_ (<i class="fa fa-eye"></i>) in code blocks to togg
 > [**Click here**](https://github.com/cskmnrpt/qase-cypress/tree/main/cypress/e2e/tests/examples) to view Example tests for the following syntax.
 
 
-If you do not use any Qase syntax, the reporter uses the title from the `describe` and `test` functions to make the Suite and Test case titles while publishing results.
+If you do not use any Qase syntax, the reporter uses the title from the `describe` and `it` functions to make the Suite and Test case titles while publishing results.
 
 
 ## Example Spec file
@@ -50,7 +50,11 @@ The `qase.title()` method is used to set the title of a test case, both when cre
 {{#include ../code/cypress/title.cy.js:syntax}}
 ```
 
-If you don’t explicitly set a title using the `qase.title` method, the title specified in the `it(..)` function will be used for new test cases. However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
+To update a Qase test case's title from code, you must enable "[Update test cases](https://help.qase.io/en/articles/5563702-test-runs#h_161810cf24)" in your project's run settings.
+
+If you don’t explicitly set a title using the `qase.title()` method, the title specified in the `it(..)` function will be sent to Qase.
+
+However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
 
 
 

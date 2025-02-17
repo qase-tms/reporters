@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "Sample API Test",
+    "description": "Basic Newman test example"
+  },
+  "item": [
+    {
+      "name": "GET Request Example",
+      "request": {
+        "method": "GET",
+        "url": "https://jsonplaceholder.typicode.com/posts/1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// qase: 1",
+              "pm.test('Response is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}

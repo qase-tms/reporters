@@ -72,7 +72,11 @@ The `qase.title()` method is used to set the title of a test case, both when cre
 {{#include ../code/playwright/title.spec.js:syntax}}
 ```
 
-If you don’t explicitly set a title using the `qase.title` method, the title specified in the `test(..)` function will be used for new test cases. However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
+To update a Qase test case's title from code, you must enable "[Update test cases](https://help.qase.io/en/articles/5563702-test-runs#h_161810cf24)" in your project's run settings.
+
+If you don’t explicitly set a title using the `qase.title` method, the title specified in the `test(..)` function will be used for new test cases. 
+
+However, if the `qase.title` method is defined, it always takes precedence and overrides the title from the `test(..)` function.
 
 
 
@@ -138,7 +142,7 @@ This method can help attach one, or more files to the test's result. You can als
 
 ### Ignore
 ---
-If this method is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still executed by Playwright, its result will not be considered by the reporter.
+If this method is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still executed by Playwright, its result will not be reported to Qase.
 
 ```js
 {{#include ../code/playwright/ignore.spec.js:syntax}}
