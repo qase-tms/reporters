@@ -1,0 +1,53 @@
+{
+  "info": {
+    "_postman_id": "12345",
+    "name": "User Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get User Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/{{userid}}",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "{{userid}}"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// qase.parameters: userid, user.name",
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "// qase.parameters: userid",
+              "pm.test('Response has correct userId', function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.id).to.eql(parseInt(pm.iterationData.get('userid')));",
+              "});",
+              "",
+              "pm.test('Response has correct name', function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.name).to.eql(pm.iterationData.get('user.name'));",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
