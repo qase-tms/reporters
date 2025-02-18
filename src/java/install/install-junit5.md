@@ -25,7 +25,7 @@ To install and add the reporter as a dependency, add the following to your `pom.
   <dependency>
      <groupId>io.qase</groupId>
      <artifactId>qase-junit5-reporter</artifactId>
-     <version>4.0.0</version>
+     <version>4.0.6</version>
      <scope>test</scope>
   </dependency>
   <dependency>
@@ -100,7 +100,7 @@ dependencies {
    testImplementation 'org.junit.jupiter:junit-jupiter-params'
    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
    testImplementation 'org.junit.platform:junit-platform-launcher'
-   testImplementation('io.qase:qase-junit5-reporter:4.0.0')
+   testImplementation('io.qase:qase-junit5-reporter:4.0.6')
 }
 
 test {
@@ -164,7 +164,7 @@ Please refer to [this article](https://help.qase.io/en/articles/9787250-how-do-i
 
 You should see the following summary at the end of the execution:
 
-```
+``` console
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
