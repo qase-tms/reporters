@@ -83,7 +83,6 @@ To install and add the reporter as a dependency, add the following to your `pom.
 1. Include the following to your `build.gradle`:
 
 ```groovy
-groovy
 configurations {
    aspectjweaver
 }
@@ -137,7 +136,11 @@ test.doFirst {
 
 We'll use a simple test to check if the results are being published to your Qase project.
 
+<<<<<<< HEAD
 Replace the file in `src/test/java/com/example/` directory (your path may differ) with the code below:
+=======
+Replace the file in `src/test/java/com/example/` directory (_your path may differ_) with the code below:
+>>>>>>> add-syntax
 
 ```java
 // IntegrationTest.java
