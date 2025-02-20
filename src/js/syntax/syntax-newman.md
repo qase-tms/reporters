@@ -11,8 +11,8 @@ Tip: Click the _eyeball icon_ (<i class="fa fa-eye"></i>) in code blocks to togg
 You can link multiple Qase Ids to a single test. Here's an example
 
 ```js
-// qase: 10
-// Qase: 1, 2, 3
+//// qase: 10
+//// Qase: 1, 2, 3
 pm.test('expect response be 200', function() {
   pm.response.to.be.info
 })
