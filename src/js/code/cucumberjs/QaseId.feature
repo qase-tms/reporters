@@ -8,4 +8,8 @@ Feature: Qase ID
   @QaseID=2
   Scenario: Scenario with NEW Qase ID tag
     Given I have a step
+
+  @QaseID=3,4,5
+  Scenario: Scenario with MULTIPLE Qase ID tag
+    Given I have a step
 // ANCHOR_END: syntax
