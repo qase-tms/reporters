@@ -17,14 +17,35 @@ If you do not use any Qase syntax, the reporter uses the title from the `describ
 
 ### Import Statement
 ---
-Add the following statement at the beginning of your spec file, before any tests.
+Add the following statement at the beginning of your test file, before any tests.
 
 ```javascript
 import { qase } from "cypress-qase-reporter/mocha";
 ```
-Now, let's take a closer look at each of the Qase functions.
+Instead of adding this statement for every test file, you could add this to your `e2e.js` file with Global scope.
 
+`cypress/support/e2e.js`
+```js
+// Import qase
+import { qase } from "cypress-qase-reporter/mocha";
 
+// Attach qase to global scope
+global.qase = qase;
+```
+Also, add the path to support file in your config:
+
+```js
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      // Node event listeners here if needed
+    },
+    supportFile: "cypress/support/e2e.js",
+  },
+});
+```
  
 ### Qase Id
 ---
