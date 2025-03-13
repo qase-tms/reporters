@@ -3,7 +3,7 @@ import { markdownContent } from "./markdownContent";
 
 /*
 // ANCHOR: syntax
-//it("Demonstrates all Qase methods", () => {
+// it("Demonstrates all Qase methods", () => {
    qase.fields({
      priority: "high",
      severity: "critical",

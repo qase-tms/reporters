@@ -2,8 +2,10 @@
 
 > For the most up-to-date changelog, please check our [GitHub repository](https://github.com/qase-tms/qase-javascript/blob/main/qase-jest/changelog.md).
 
-## 2.0.3
+## 2.0.4
+Improved test name processing: Qase IDs are now automatically removed when uploading results
 
+## 2.0.3
 
 Added the ability to specify a test metadata in tests:
 
@@ -40,13 +42,11 @@ test('test', () => {
 
 ## 2.0.1
 
-
 Fixed a bug when a test was marked as skipped.
 This reporter has uploaded this test as blocked.
 Right now the reporter will upload this test as skipped.
 
 ## 2.0.0
-
 
 This is the first release in the 2.x series of the Jest reporter.
 It brings new and more flexible configs, uploading results in parallel with running tests,
@@ -57,7 +57,6 @@ For more information about the new features and a guide for migration from v1, r
 [reporter documentation](https://github.com/qase-tms/qase-javascript/tree/main/qase-jest#readme)
 
 ## 2.0.0-beta.2
-
 
 * This release brings support for multiple changes made in the Qase API client
   and the qase-javascript-commons library.
