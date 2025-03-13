@@ -8,12 +8,6 @@ Tip: Click the _eyeball icon_ (<i class="fa fa-eye"></i>) in code blocks to togg
 If you do not use any Qase syntax, the reporter uses the title from the `fixture` and `test` functions to make the Suite and Test case titles while publishing results.
 
 
-### Example Spec file
----
-```javascript
-{{#include ../code/jest/example.spec.js:syntax}}
-```
-
 ### Import Statement
 ---
 Add the following statement at the beginning of your spec file, before any tests.
