@@ -1,18 +1,15 @@
 from qase.pytest import qase
 
+// ANCHOR:syntax
+@qase.suite("Main Test Suite")
+def test_basic_suite():
+    //# test logic here
 
-@qase.suite("First suite")
-def test_suite():
-    assert True
+@qase.suite("Main Test Suite\tSub Suite")  # Use `\t` to create a nested structure
+def test_nested_suite_tab():
+    //# test logic here
 
-
-@qase.suite("First suite\tSecond Suite")  # Use `\t` to nest suites.
-def test_suite_nesting_1():
-    assert True
-
-
-@qase.suite(
-    "First suite.Second Suite.Third Suite"
-)  # You can also use the dot notation to nest suites.
-def test_suite_nesting_2():
-    assert True
+@qase.suite("Main Test Suite.Sub Suite.Inner Suite")  # Dot notation for deeper nesting
+def test_nested_suite_dot():
+    //# test logic here
+// ANCHOR_END:syntax
