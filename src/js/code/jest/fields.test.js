@@ -1,38 +1,106 @@
 const { qase } = require("jest-qase-reporter/jest");
 const { markdownContent } = require("./markdownContent");
 
-// ANCHOR:syntax
-// describe("Example: fields.test.js\tTest cases with field: Priority", () => {
-//   test("Priority = low", async () => {
-     await qase.fields({ priority: "low" });
-     // //test logic here
-//   });
-// });
-//   describe("Example: fields.test.js\tTest cases with field: Severity", () => {
-//     test("Severity = trivial", async () => {
-     await qase.fields({ severity: "trivial" });
-     // //test logic here
-//     });
-//   });
-//   describe("Example: fields.test.js\tTest cases with field: Layer", () => {
-//     test("Layer = e2e", async () => {
-     await qase.fields({ layer: "e2e" });
-     // //test logic here
-//     });
-//   });
-//   describe("Example: fields.test.js\tTest cases with Description, Pre & Post Conditions", () => {
-//     test("Description with Markdown Support", async () => {
-     await qase.fields({ description: markdownContent });
-     // //test logic here
-//     });
-//     test("Preconditions with Markdown Support", async () => {
-     await qase.fields({ preconditions: markdownContent });
-     // //test logic here
-//     });
-//     test("Postconditions with Markdown Support", async () => {
-     await qase.fields({ postconditions: markdownContent });
-     // //test logic here
-//     });
-//   });
-// });
-// ANCHOR_END:syntax
+/*
+// ANCHOR: syntax
+//it("Demonstrates all Qase methods", () => {
+   qase.fields({
+     priority: "high",
+     severity: "critical",
+     layer: "e2e",
+     description: "Example description",
+     preconditions: "Example precondition",
+     postconditions: "Example postcondition",
+ //  });
+//   //  Test logic here
+ //});
+// ANCHOR_END: syntax
+*/
+
+describe("Test cases with field: Priority", () => {
+  /*
+   * Meta data such as Priority, Severity, Layer fields, Description, and  pre-conditions can be updated from code.
+   * This enables you to manage test cases from code directly.
+   */
+
+  it("Priority = low", () => {
+    qase.fields({ priority: "low" });
+    expect(true).to.equal(true);
+  });
+
+  it("Priority = medium", () => {
+    qase.fields({ priority: "medium" });
+    expect(true).to.equal(true);
+  });
+
+  it("Priority = high", () => {
+    qase.fields({ priority: "high" });
+    expect(true).to.equal(true);
+  });
+});
+
+describe("Test cases with field: Severity", () => {
+  it("Severity = trivial", () => {
+    qase.fields({ severity: "trivial" });
+    expect(true).to.equal(true);
+  });
+
+  it("Severity = minor", () => {
+    qase.fields({ severity: "minor" });
+    expect(true).to.equal(true);
+  });
+
+  it("Severity = normal", () => {
+    qase.fields({ severity: "normal" });
+    expect(true).to.equal(true);
+  });
+
+  it("Severity = major", () => {
+    qase.fields({ severity: "major" });
+    expect(true).to.equal(true);
+  });
+
+  it("Severity = critical", () => {
+    qase.fields({ severity: "critical" });
+    expect(true).to.equal(true);
+  });
+
+  it("Severity = blocker", () => {
+    qase.fields({ severity: "blocker" });
+    expect(true).to.equal(true);
+  });
+});
+
+describe("Test cases with field: Layer", () => {
+  it("Layer = e2e", () => {
+    qase.fields({ layer: "e2e" });
+    expect(true).to.equal(true);
+  });
+
+  it("Layer = api", () => {
+    qase.fields({ layer: "api" });
+    expect(true).to.equal(true);
+  });
+
+  it("Layer = unit", () => {
+    qase.fields({ layer: "unit" });
+    expect(true).to.equal(true);
+  });
+});
+
+describe("Test cases with Description, Pre & Post Conditions", () => {
+  it("Description with Markdown Support", () => {
+    qase.fields({ description: markdownContent });
+    expect(true).to.equal(true);
+  });
+
+  it("Preconditions with Markdown Support", () => {
+    qase.fields({ preconditions: markdownContent });
+    expect(true).to.equal(true);
+  });
+
+  it("Postconditions with Markdown Support", () => {
+    qase.fields({ postconditions: markdownContent });
+    expect(true).to.equal(true);
+  });
+});
