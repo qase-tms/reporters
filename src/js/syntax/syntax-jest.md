@@ -91,11 +91,7 @@ In addition to test.step(), this method can be used to provide any additional co
 
 ### Attach
 ---
-Before using `qase.attach` method. You need to set 
-```json 
-"uploadAttachments":true 
-``` 
-inside your `qase.config.json` Configuration file.
+Before using `qase.attach` method. You need to set `uploadAttachments":true` inside your `qase.config.json` Configuration file.
 
 This method can help attach one, or more files to the test's result. You can also add the file's contents, directly from code. For example: 
 
