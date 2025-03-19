@@ -1,21 +1,21 @@
 import { test, expect } from '@playwright/test';
 import { qase } from 'playwright-qase-reporter';
 
-  test("Test without qase.title() method", () => {
+test("Test without qase.title() method", () => {
 
-      /* 
-       * Here, we're are not using a qase.title() method
-       * Given, you have "Auto-create cases" option enabled for this project.
-       * A new test will be created in Qase, with the test's title.
-       */
+  /* 
+   * Here, we're are not using a qase.title() method
+   * Given, you have "Auto-create cases" option enabled for this project.
+   * A new test will be created in Qase, with the test's title.
+   */
 
-    expect(true).toBe(true);
-  });
+  expect(true).toBe(true);
+});
 
 // ANCHOR: syntax
 //test("This won't appear in Qase", () => {
-  qase.title("This text will be the title of the test, in Qase");
-  //// Test logic here
+qase.title("This text will be the title of the test, in Qase");
+//// Test logic here
 //});
 // ANCHOR_END: syntax
 

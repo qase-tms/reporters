@@ -1,29 +1,15 @@
 const { qase } = require("jest-qase-reporter/jest");
-
-describe("Example: title.test.js", () => {
-  it("Test without qase.title() method", () => {
-    /*
-     * Here, we're are not using a qase.title() method
-     * Given, you have "Auto-create cases" option enabled for this project.
-     * A new test will be created in Qase, with the test's title.
-     */
-
-    expect(true).to.equal(true);
-  });
-
-// ANCHOR: syntax
-//it("This won't appear in Qase", () => {
-  qase.title("This text will be the title of the test, in Qase");
-//  // Test logic here
+//ANCHOR:syntax
+//describe("Example: title.test.js", () => {
+  //test("Test without qase.title() method", () => {
+//  // //test logic here
+//  });
+//  test("This won't appear in Qase", () => {
+     qase.title("This text will be the title of the test, in Qase");
+//   // //test logic here
+//  });
 //});
-// ANCHOR_END: syntax
-
-    /*
-     * Here, the Qase Test case's title will be taken from qase.title() method.
-     */
-
-});
-
+//ANCHOR_END:syntax
 /*
  *
  *     Q) What about the tests where the qase.title() method is not used?
