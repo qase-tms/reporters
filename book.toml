@@ -46,6 +46,7 @@ typescript = "//"
 ts = "//"
 bash = "//"
 gherkin = "#"
+robot = "//"
 
 [output.html.playground]
 editable = true
