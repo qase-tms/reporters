@@ -46,7 +46,11 @@ typescript = "//"
 ts = "//"
 bash = "//"
 gherkin = "#"
+<<<<<<< HEAD
 robot = "//"
+=======
+robot= "//"
+>>>>>>> 9b50f1b (made change to eobot code, changelog and syntax page)
 
 [output.html.playground]
 editable = true

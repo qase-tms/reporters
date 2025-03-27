@@ -21,7 +21,11 @@ Now, let's take a closer look at each of the Qase functions.
 
 ### Qase ID
 ---
+<<<<<<< HEAD
 To associate a Qase Test Case ID with test results in Robot Framework, use the [Tags] feature with Q-ID. This allows linking test execution results to test cases in Qase.
+=======
+To associate a Qase Test Case ID with test results in Robot Framework, use the `[Tags]` feature with `Q-ID`. This allows linking test execution results to test cases in Qase.
+>>>>>>> 9b50f1b (made change to eobot code, changelog and syntax page)
 
 ```robot
 {{#include ../code/robot/qaseId.robot:syntax}}
@@ -31,7 +35,11 @@ To associate a Qase Test Case ID with test results in Robot Framework, use the [
 ---
 In Robot Framework, you can define various test case attributes such as: Preconditions,Postconditions,Description,Priority,Severity and Layer.
 
+<<<<<<< HEAD
 To define a field, use the [Tags] setting with qase.fields.
+=======
+To define a field, use the `[Tags]` setting with `qase.field`s.
+>>>>>>> 9b50f1b (made change to eobot code, changelog and syntax page)
 Each field is specified as a key-value pair.
 
 ```python
@@ -40,7 +48,11 @@ Each field is specified as a key-value pair.
 
 ### Parameters
 ---
+<<<<<<< HEAD
 To make your tests parameterized in Robot Framework while integrating with Qase, you can use [Tags] setting with qase.params.
+=======
+To make your tests parameterized in Robot Framework while integrating with Qase, you can use [Tags] setting with `qase.params`.
+>>>>>>> 9b50f1b (made change to eobot code, changelog and syntax page)
 
 ```python
 {{#include ../code/robot/parameters.robot:syntax}}
