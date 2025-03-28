@@ -1,5 +1,5 @@
 Feature: Parametrized User Subscription Tests
-
+//ANCHOR:syntax
   Scenario Outline: User with active subscription can access premium feature
     Given the user has an active subscription with plan "<plan>" and status "<status>"
     When the user tries to access a premium feature
@@ -10,3 +10,4 @@ Feature: Parametrized User Subscription Tests
       | Premium  | Active  |
       | Business | Active  |
       | Pro      | Active  |
+//ANCHOR_END:syntax
