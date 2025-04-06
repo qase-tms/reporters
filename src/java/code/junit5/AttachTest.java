@@ -3,15 +3,14 @@ package com.example;
 import io.qase.commons.annotation.Step;
 import io.qase.junit5.Qase;
 import org.junit.jupiter.api.Test;
-
-public class AttachTest {
-
-    @Test
-    public void testWithFileAttachment() {
+//ANCHOR:syntax
+//public class AttachTest {
+    //@Test
+    //public void testWithFileAttachment() {
         Qase.attach("./src/test/java/com/example/attachments/test-file.txt");
-        System.out.println("passed");
-    }
-
+        ////test logic here
+    //}
+//ANCHOR_END:syntax
     @Test
     public void testWithInlineAttachment() {
         Qase.attach("Inline.txt", "This is the content of the file", "text/plain");
