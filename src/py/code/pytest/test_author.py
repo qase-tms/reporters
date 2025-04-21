@@ -1,6 +1,6 @@
 from qase.pytest import qase
-
-
-@qase.author("Bret S")
+//ANCHOR:syntax
+@qase.author("username") #make sure to provide correct 'username'
 def test_qase_author():
-    assert True
+    //#test logic here
+//ANCHOR_END:syntax

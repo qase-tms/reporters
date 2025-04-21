@@ -2,8 +2,80 @@
 
 > For the most up-to-date changelog, please check our [GitHub repository](https://github.com/qase-tms/qase-python/blob/main/qase-pytest/changelog.md).
 
+# qase-pytest 6.2.0
 
+## What's new
 
+Updated `qase.id()` decorator to support a list of integers, allowing one test to be linked to multiple test cases.
+
+```python
+@qase.id([2, 3])
+def test_example():
+    pass
+```
+
+# qase-pytest 6.1.15
+
+## What's new
+
+Resolved an issue where a failure message for attachment uploads was displayed even when attachments were disabled in
+the configuration.
+
+# qase-pytest 6.1.14
+
+## What's new
+
+Resolved an issue in the pytest plugin where an KeyError ('browser_name') could
+occur during pytest_runtest_makereport.
+
+# qase-pytest 6.1.13
+
+## What's new
+
+Resolved an issue in the pytest plugin where an AttributeError ('BookingForm' object has no attribute 'video') could
+occur during pytest_runtest_makereport.
+
+# qase-pytest 6.1.12
+
+## What's new
+
+1. Removed unsupported `tags` decorator as our API does not support working with tags.
+2. Fixed an issue where data was not passed correctly when using `author` and `muted` decorators.
+
+# qase-pytest 6.1.11
+
+## What's new
+
+Fixed issues with using `pytest.xfail` and the `skipif` mark:
+
+1. Custom statuses did not work when using `pytest.xfail` within the test body.
+2. The status was incorrect when using the `skipif` mark.
+
+# qase-pytest 6.1.10
+
+## What's new
+
+The ability to override statuses for tests marked with the `xfail` marker has been added. By default, failed tests are
+assigned the `skipped` status, and passed tests are assigned the `passed` status. Custom statuses can be specified by
+providing the slug of the desired status in the configuration. Configuration values can be set via `qase.config.json` or
+environment variables:
+
+- `QASE_PYTEST_XFAIL_STATUS_XFAIL`
+- `QASE_PYTEST_XFAIL_STATUS_XPASS`
+
+```diff
+{ ...,
+  "framework": {
+    "pytest": {
+      "captureLogs": true,
++      "xfailStatus": {
++        "xfail": "skipped",
++        "xpass": "passed"
++      }
++    }
+  }
+}
+```
 
 ## 6.1.9
 

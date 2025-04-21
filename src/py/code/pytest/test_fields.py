@@ -1,112 +1,63 @@
 import pytest
 from qase.pytest import qase
 
-
 def load_markdown_content():
     with open("tests/examples/markdown.md", "r") as file:
         return file.read()
 
+markdown_content = load_markdown_content()
 
-markdowncontent = load_markdown_content()
+// ANCHOR:syntax
 
-
-class Test_Priority:
-    @qase.title("Test case with field: Priority - low")
+class TestPriority:
+    @qase.title("Test case with Priority - Low")
     @qase.priority("low")
     def test_priority_low(self):
-        assert True, "Test failed with priority: low"
+        //# test logic here
 
-    @qase.title("Test case with field: Priority - medium")
-    @qase.priority("medium")
-    def test_priority_medium(self):
-        assert True, "Test failed with priority: medium"
-
-    @qase.title("Test case with field: Priority - high")
+    @qase.title("Test case with Priority - High")
     @qase.priority("high")
     def test_priority_high(self):
-        assert True, "Test failed with priority: high"
+        //# test logic here
 
-
-class Test_Severity:
-    @qase.title("Test case with field: Severity - trivial")
-    @qase.severity("trivial")
-    def test_severity_trivial(self):
-        assert True, "Test failed with severity: trivial"
-
-    @qase.title("Test case with field: Severity - minor")
-    @qase.severity("minor")
-    def test_severity_minor(self):
-        assert True, "Test failed with severity: minor"
-
-    @qase.title("Test case with field: Severity - normal")
-    @qase.severity("normal")
-    def test_severity_normal(self):
-        assert True, "Test failed with severity: normal"
-
-    @qase.title("Test case with field: Severity - major")
-    @qase.severity("major")
-    def test_severity_major(self):
-        assert True, "Test failed with severity: major"
-
-    @qase.title("Test case with field: Severity - critical")
+class TestSeverity:
+    @qase.title("Test case with Severity - Critical")
     @qase.severity("critical")
     def test_severity_critical(self):
-        assert True, "Test failed with severity: critical"
+        //# test logic here
 
-    @qase.title("Test case with field: Severity - blocker")
-    @qase.severity("blocker")
-    def test_severity_blocker(self):
-        assert True, "Test failed with severity: blocker"
-
-
-class Test_Layer:
-    @qase.title("Test case with field: Layer - e2e")
-    @qase.layer("e2e")
-    def test_layer_e2e(self):
-        assert True, "Test failed with layer: e2e"
-
-    @qase.title("Test case with field: Layer - api")
+class TestLayer:
+    @qase.title("Test case with Layer - API")
     @qase.layer("api")
     def test_layer_api(self):
-        assert True, "Test failed with layer: api"
+        //# test logic here
 
-    @qase.title("Test case with field: Layer - unit")
-    @qase.layer("unit")
-    def test_layer_unit(self):
-        assert True, "Test failed with layer: unit"
-
-
-class Test_Description:
+class TestMetadataFields:
     @qase.title("Test case with Description field")
-    @qase.description(markdowncontent)
+    @qase.description(markdown_content)
     def test_description(self):
-        assert markdowncontent is not None, "Description content is empty"
+        //# test logic here
 
-
-class Test_Preconditions:
     @qase.title("Test case with Preconditions field")
-    @qase.preconditions(markdowncontent)
+    @qase.preconditions(markdown_content)
     def test_preconditions(self):
-        assert markdowncontent is not None, "Preconditions content is empty"
+        //# test logic here
 
-
-class Test_Postconditions:
     @qase.title("Test case with Postconditions field")
-    @qase.postconditions(markdowncontent)
+    @qase.postconditions(markdown_content)
     def test_postconditions(self):
-        assert markdowncontent is not None, "Postconditions content is empty"
-
-
-class Test_All_Fields:
-    @qase.title("Test cases with all fields")
+        //# test logic here
+        
+class TestAllFields:
+    @qase.title("Test case with multiple fields")
     @qase.fields(
         ("severity", "normal"),
-        ("custom_field", "value"),
         ("priority", "high"),
         ("layer", "unit"),
-        ("description", "Try logging to Qase TestOps using login and password"),
-        ("preconditions", "*Precondition 1*. Markdown is supported."),
-        ("postconditions", "*Postcondition 1*. Markdown is supported."),
+        ("description", "Example description"),
+        ("preconditions", "Precondition example."),
+        ("postconditions", "Postcondition example."),
     )
-    def test_with_fields_success(self):
-        assert 1 == 1
+    def test_with_all_fields(self):
+        //# test logic here
+// ANCHOR_END:syntax
