@@ -1,5 +1,5 @@
 Feature: Qase Id
-
-  @QaseId=1
-  Scenario: A test case linked with Qase id
-    Then An example step
+//ANCHOR:syntax
+  @QaseId=1  # Replace 1 with an actual test case ID from your project
+//  #test logic here
+//ANCHOR_END:syntax
