@@ -1,17 +1,15 @@
 *** Settings ***
 Library    ../../resources/examples/steps.py
-
-*** Test Cases ***
-
-Test with fields: Preconditions
+//ANCHOR:syntax
+//*** Test Cases ***
+// Test with fields: Preconditions
     [Tags]    qase.fields:{ "preconditions": "Write your precondition here." }
-    Step 01
-    Step 02
-
+//  # test logic here 
+//  # Similarly can be done for other fields such as Postconditions,Description,Priority,Severity and Layer.
+//ANCHOR_END:syntax
 Test with fields: Postconditions
     [Tags]    qase.fields:{ "postconditions": "Write your postcondition here." }
-    Step 01
-    Step 02
+    # test logic here
 
 Test with fields: Description
     [Tags]    qase.fields:{ "description": "Write your description here." }
