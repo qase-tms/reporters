@@ -2,12 +2,11 @@ package com.example;
 
 import io.qase.commons.annotation.QaseTitle;
 import org.junit.jupiter.api.Test;
-
-public class TitleTest {
-
-    @Test
+//ANCHOR:syntax
+//public class TitleTest {
+    //@Test
     @QaseTitle("Test with `@QaseTitle` annotation")
-    public void test() {
-        System.out.println("passed");
-    }
-}
+   ////test logic here
+//    }
+//}
+//ANCHOR_END:syntax 
