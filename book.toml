@@ -47,6 +47,8 @@ ts = "//"
 bash = "//"
 gherkin = "#"
 feature = "//"
+fearure = "#"
+robot = "//"
 
 [output.html.playground]
 editable = true
