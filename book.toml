@@ -53,3 +53,6 @@ robot = "//"
 [output.html.playground]
 editable = true
 line-numbers = true
+
+[output.html.redirect]
+"/intro" = "https://help.qase.io/"
