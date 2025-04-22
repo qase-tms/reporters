@@ -70,5 +70,5 @@ The comment logic is added in java file located at [**Stepdefinition**](https://
 The .feature file only contains the scenario flow, while the comment is programmatically set inside step definitions.
 
 ```feature
-{{#include ../code/cucumber7/features/comment.feature:syntax}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ```

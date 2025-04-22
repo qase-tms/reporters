@@ -54,7 +54,7 @@ Each method annotated with @Step becomes a clearly defined step in the test run 
 To run the same test method with multiple sets of input data, use the @ParameterizedTest annotation. This is helpful when validating a test against various inputs without writing separate methods for each. 
 
 ```java
-{{#include ../code/junit5/Paramstest.java:syntax}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ```
 ### Fields
 ---
@@ -69,7 +69,7 @@ Currently, you can define `description`, `pre & post conditions`, and fields lik
 If this tag is added, the reporter will exclude the test’s result from the report sent to Qase. While the test will still executed, its result will not be considered by the reporter.
 
 ```java
-{{#include ../code/junit5/IgnoreTEst.java:syntax}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ```
 
 ### Attach
