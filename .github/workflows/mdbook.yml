@@ -12,9 +12,11 @@ jobs:
       pages: write  # To push to a GitHub Pages site
       id-token: write # To update the deployment status
     steps:
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Install latest mdbook
         run: |
           tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
@@ -22,11 +24,17 @@ jobs:
           mkdir mdbook
           curl -sSL $url | tar -xz --directory=./mdbook
           echo `pwd`/mdbook >> $GITHUB_PATH
+
       - name: Build Book
         run: |
           # This assumes your book is in the root of your repository.
           # Just add a `cd` here if you need to change to another directory.
           mdbook build
+
+      - name: Copy the redirect file
+        run: |
+          cp ./index.html book/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -34,6 +42,7 @@ jobs:
         with:
           # Upload entire repository
           path: 'book'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
