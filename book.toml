@@ -55,4 +55,4 @@ editable = true
 line-numbers = true
 
 [output.html.redirect]
-"/intro" = "https://help.qase.io/"
+# "/intro" = "https://help.qase.io/"
